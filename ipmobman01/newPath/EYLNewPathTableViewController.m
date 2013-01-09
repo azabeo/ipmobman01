@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+
 #import "EYLNewPathTableViewController.h"
 
 @interface EYLNewPathTableViewController ()
@@ -21,15 +23,12 @@
 @synthesize goButton;
 @synthesize departureSwitch;
 @synthesize departureLabel;
-
+@synthesize locationManager; 
+@synthesize startingPoint;
+@synthesize locationActivityIndicator;
 @synthesize when;
-/*
-@synthesize from;
-@synthesize to;
-@synthesize when;
-@synthesize isDeparture;
-*/
 @synthesize navControllerDelegate;
+@synthesize language;
 
 NSString *dep;
 NSString *arr;
@@ -65,7 +64,7 @@ NSDateFormatter *timeFormatter;
     [self.navigationItem setHidesBackButton:YES];
     
     fromLabel.text = NSLocalizedString(@"From:", @"from");
-    fromText.placeholder = NSLocalizedString(@"Current location", @"from");
+    fromText.placeholder = NSLocalizedString(@"Locating...", @"Locating...");
     toLabel.text = NSLocalizedString(@"To:", @"to");
     toText.placeholder = NSLocalizedString(@"City center", @"city center");
     goButton.titleLabel.text = NSLocalizedString(@"GO!", @"go");
@@ -94,6 +93,17 @@ NSDateFormatter *timeFormatter;
     navControllerDelegate = [[EYLnavigationControllerDelegate alloc] init];
     
     self.navigationController.delegate = navControllerDelegate;
+    
+    /*
+    dispatch_async(kBgQueue, ^{
+        [self performSelectorOnMainThread:@selector(getLatLon) 
+                               withObject:Nil waitUntilDone:YES];
+    });
+    */
+    
+    [self getLatLon];
+    [self getLanguage];
+
 }
 
 - (void)viewDidUnload
@@ -106,6 +116,7 @@ NSDateFormatter *timeFormatter;
     [self setToText:nil];
     [self setGoButton:nil];
     [self setTimeLabel:nil];
+    [self setLocationActivityIndicator:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -115,6 +126,58 @@ NSDateFormatter *timeFormatter;
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (void) getLanguage{
+    NSLocale *locale = [NSLocale currentLocale]; 
+    language = [locale displayNameForKey:NSLocaleIdentifier value:[locale localeIdentifier]]; 
+    
+    LogInfo(@"METRIC: %@",[locale objectForKey:NSLocaleUsesMetricSystem]);
+    LogInfo(@"LANGUAGE: %@", language);
+}
+
+- (void) getLatLon{
+    LogDebug(@"Getting location");
+    
+    [locationActivityIndicator startAnimating];
+    
+    self.locationManager = [[CLLocationManager alloc] init]; 
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest; 
+    [locationManager startUpdatingLocation];
+}
+
+#pragma mark -
+#pragma mark CLLocationManagerDelegate Methods
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    
+    if (startingPoint == nil) self.startingPoint = newLocation;
+    NSString *latitudeString = [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
+    NSString *longitudeString = [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
+    [locationManager stopUpdatingLocation];
+    
+    /*
+    EYLremoteConnection* connection = [[EYLremoteConnection alloc] init];
+    connection.delegate = self;
+    [connection getStopsByDistanceWithLat:latitudeString Lon:longitudeString Dist:2 AgencyGlobalId:agid];
+     */
+    
+    [locationActivityIndicator stopAnimating];
+    fromText.placeholder = NSLocalizedString(@"Current location", @"from");
+    
+    LogDebug(@"LATLON: %@ - %@",latitudeString, longitudeString);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    if (error.code == kCLErrorDenied) {
+        [locationManager stopUpdatingLocation];
+    } 
+    if (error.code == kCLErrorLocationUnknown) {
+        //nothing to do
+    } 
+    
+    LogError(@"Location Error");
+}
+
 
 - (void) showData{
     LogDebug(@"\nFROM: %@\nTO: %@\nWHEN: %@\nisDeparture: %@",fromText.text,toText.text, [timeFormatter stringFromDate: when], departureLabel.text);

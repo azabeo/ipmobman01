@@ -73,6 +73,10 @@
                                                         <action selector="textFieldDoneEditing:" destination="fgs-Y1-OGe" eventType="editingDidEndOnExit" id="jL5-G5-Lug"/>
                                                     </connections>
                                                 </textField>
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="whiteLarge" id="uVq-fw-h5K">
+                                                    <rect key="frame" x="232" y="3" width="37" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -192,6 +196,7 @@
                         <outlet property="fromLabel" destination="QXF-aF-Z1U" id="g4E-5G-aFj"/>
                         <outlet property="fromText" destination="Wpp-n5-UlV" id="d2j-qN-7rN"/>
                         <outlet property="goButton" destination="ikA-cV-TeX" id="U8o-Wp-94c"/>
+                        <outlet property="locationActivityIndicator" destination="uVq-fw-h5K" id="fBk-ke-SkJ"/>
                         <outlet property="timeLabel" destination="uCC-Vf-Nop" id="esF-E2-Kgw"/>
                         <outlet property="toLabel" destination="sKl-2J-zaX" id="iCz-CX-tt0"/>
                         <outlet property="toText" destination="xvW-eh-MD6" id="u8h-Ed-JXv"/>

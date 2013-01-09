@@ -7,17 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "EYLPathDateTimeViewController.h"
 #import "EYLSelectPointTableViewController.h"
 #import "EYLnavigationControllerDelegate.h"
 #import "Logging.h"
 
-@interface EYLNewPathTableViewController : UITableViewController <dateTimeProtocol>
+@interface EYLNewPathTableViewController : UITableViewController <dateTimeProtocol, CLLocationManagerDelegate>
 
-//@property (strong, nonatomic) NSString *from;
-//@property (strong, nonatomic) NSString *to;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *locationActivityIndicator;
+
 @property (strong, nonatomic) NSDate *when;
-//@property (nonatomic) BOOL *isDeparture;
+@property (strong, nonatomic) NSString *language;
 
 @property (weak, nonatomic) IBOutlet UILabel *fromLabel;
 @property (weak, nonatomic) IBOutlet UITextField *fromText;
@@ -32,6 +33,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *departureLabel;
 
 @property (strong, nonatomic) EYLnavigationControllerDelegate* navControllerDelegate;
+
+@property (strong, nonatomic) CLLocationManager *locationManager; 
+@property (strong, nonatomic) CLLocation *startingPoint;
 
 - (IBAction)buttonPressed:(id)sender;
 - (IBAction)textFieldDoneEditing:(id)sender;

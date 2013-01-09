@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF23769D167728F200B738F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF23769C167728F200B738F1 /* UIKit.framework */; };
+		FF23769F167728F200B738F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF23769E167728F200B738F1 /* Foundation.framework */; };
+		FF2376A1167728F200B738F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2376A0167728F200B738F1 /* CoreGraphics.framework */; };
+		FF2376A3167728F200B738F1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2376A2167728F200B738F1 /* CoreData.framework */; };
+		FF2376A9167728F200B738F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF2376A7167728F200B738F1 /* InfoPlist.strings */; };
+		FF2376AB167728F200B738F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2376AA167728F200B738F1 /* main.m */; };
+		FF2376AF167728F200B738F1 /* EYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2376AE167728F200B738F1 /* EYLAppDelegate.m */; };
+		FF2376B2167728F200B738F1 /* ipmobman01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF2376B0167728F200B738F1 /* ipmobman01.xcdatamodeld */; };
+		FF2376B916772AB500B738F1 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2376B816772AB500B738F1 /* main.storyboard */; };
+		FF53BCD216846B0400A40693 /* EYLSelectPointTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF53BCD116846B0400A40693 /* EYLSelectPointTableViewController.m */; };
+		FF53BCD616846DB700A40693 /* EYLSelectStopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF53BCD516846DB700A40693 /* EYLSelectStopTableViewController.m */; };
+		FFA1094D16972C3000A4E2F7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA1094C16972C3000A4E2F7 /* CoreLocation.framework */; };
+		FFC4ECA0169C3D690024D5BE /* EYLnavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC4EC9F169C3D690024D5BE /* EYLnavigationControllerDelegate.m */; };
+		FFC4ECA4169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ECA3169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.m */; };
+		FFCDEAF6167A13F900563D48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFCDEAF5167A13F900563D48 /* Localizable.strings */; };
+		FFCDEAF9167A174600563D48 /* EYLNewPathTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCDEAF8167A174600563D48 /* EYLNewPathTableViewController.m */; };
+		FFCDEAFC167A1F6B00563D48 /* genstringCommandLine.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFCDEAFB167A1F6B00563D48 /* genstringCommandLine.txt */; };
+		FFF89BD01695E4F000901F77 /* EYLremoteConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF89BCF1695E4F000901F77 /* EYLremoteConnection.m */; };
+		FFF89BD21695F0A000901F77 /* toDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFF89BD11695F0A000901F77 /* toDo.txt */; };
+		FFFB81C41680B1D400147207 /* EYLPathDateTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFB81C31680B1D400147207 /* EYLPathDateTimeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FF237698167728F200B738F1 /* ipmobman01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipmobman01.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF23769C167728F200B738F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FF23769E167728F200B738F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FF2376A0167728F200B738F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FF2376A2167728F200B738F1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FF2376A6167728F200B738F1 /* ipmobman01-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ipmobman01-Info.plist"; sourceTree = "<group>"; };
+		FF2376A8167728F200B738F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF2376AA167728F200B738F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FF2376AC167728F200B738F1 /* ipmobman01-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ipmobman01-Prefix.pch"; sourceTree = "<group>"; };
+		FF2376AD167728F200B738F1 /* EYLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EYLAppDelegate.h; sourceTree = "<group>"; };
+		FF2376AE167728F200B738F1 /* EYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EYLAppDelegate.m; sourceTree = "<group>"; };
+		FF2376B1167728F200B738F1 /* ipmobman01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ipmobman01.xcdatamodel; sourceTree = "<group>"; };
+		FF2376B816772AB500B738F1 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		FF53BCD016846B0400A40693 /* EYLSelectPointTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EYLSelectPointTableViewController.h; path = newPath/EYLSelectPointTableViewController.h; sourceTree = "<group>"; };
+		FF53BCD116846B0400A40693 /* EYLSelectPointTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EYLSelectPointTableViewController.m; path = newPath/EYLSelectPointTableViewController.m; sourceTree = "<group>"; };
+		FF53BCD416846DB700A40693 /* EYLSelectStopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EYLSelectStopTableViewController.h; path = newPath/EYLSelectStopTableViewController.h; sourceTree = "<group>"; };
+		FF53BCD516846DB700A40693 /* EYLSelectStopTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EYLSelectStopTableViewController.m; path = newPath/EYLSelectStopTableViewController.m; sourceTree = "<group>"; };
+		FFA1094C16972C3000A4E2F7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FFA1094F16972D3900A4E2F7 /* Mestre.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Mestre.gpx; sourceTree = "<group>"; };
+		FFA109501697314A00A4E2F7 /* Torino.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Torino.gpx; sourceTree = "<group>"; };
+		FFC4EC9D169C164C0024D5BE /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		FFC4EC9E169C3D690024D5BE /* EYLnavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EYLnavigationControllerDelegate.h; path = newPath/EYLnavigationControllerDelegate.h; sourceTree = "<group>"; };
+		FFC4EC9F169C3D690024D5BE /* EYLnavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EYLnavigationControllerDelegate.m; path = newPath/EYLnavigationControllerDelegate.m; sourceTree = "<group>"; };
+		FFC4ECA2169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLselectTripOptionTableViewController.h; sourceTree = "<group>"; };
+		FFC4ECA3169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLselectTripOptionTableViewController.m; sourceTree = "<group>"; };
+		FFCDEAF5167A13F900563D48 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
+		FFCDEAF7167A174600563D48 /* EYLNewPathTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EYLNewPathTableViewController.h; path = newPath/EYLNewPathTableViewController.h; sourceTree = "<group>"; };
+		FFCDEAF8167A174600563D48 /* EYLNewPathTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EYLNewPathTableViewController.m; path = newPath/EYLNewPathTableViewController.m; sourceTree = "<group>"; };
+		FFCDEAFB167A1F6B00563D48 /* genstringCommandLine.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = genstringCommandLine.txt; sourceTree = "<group>"; };
+		FFF89BCE1695E4F000901F77 /* EYLremoteConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLremoteConnection.h; sourceTree = "<group>"; };
+		FFF89BCF1695E4F000901F77 /* EYLremoteConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLremoteConnection.m; sourceTree = "<group>"; };
+		FFF89BD11695F0A000901F77 /* toDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = toDo.txt; sourceTree = "<group>"; };
+		FFFB81C21680B1D400147207 /* EYLPathDateTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EYLPathDateTimeViewController.h; path = newPath/EYLPathDateTimeViewController.h; sourceTree = "<group>"; };
+		FFFB81C31680B1D400147207 /* EYLPathDateTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EYLPathDateTimeViewController.m; path = newPath/EYLPathDateTimeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF237695167728F200B738F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFA1094D16972C3000A4E2F7 /* CoreLocation.framework in Frameworks */,
+				FF23769D167728F200B738F1 /* UIKit.framework in Frameworks */,
+				FF23769F167728F200B738F1 /* Foundation.framework in Frameworks */,
+				FF2376A1167728F200B738F1 /* CoreGraphics.framework in Frameworks */,
+				FF2376A3167728F200B738F1 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF23768D167728F200B738F1 = {
+			isa = PBXGroup;
+			children = (
+				FF2376A4167728F200B738F1 /* ipmobman01 */,
+				FF23769B167728F200B738F1 /* Frameworks */,
+				FF237699167728F200B738F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF237699167728F200B738F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF237698167728F200B738F1 /* ipmobman01.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF23769B167728F200B738F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFA1094C16972C3000A4E2F7 /* CoreLocation.framework */,
+				FF23769C167728F200B738F1 /* UIKit.framework */,
+				FF23769E167728F200B738F1 /* Foundation.framework */,
+				FF2376A0167728F200B738F1 /* CoreGraphics.framework */,
+				FF2376A2167728F200B738F1 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF2376A4167728F200B738F1 /* ipmobman01 */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4EC9C169C15F50024D5BE /* Logging */,
+				FFA10951169731A400A4E2F7 /* Locations */,
+				FFF89BCC1695E46A00901F77 /* remoteData */,
+				FFCDEAFD167A1FD000563D48 /* Localization */,
+				FFCDEAFA167A1D4D00563D48 /* newPath */,
+				FFC4ECA1169C7E500024D5BE /* newPathResults */,
+				FF2376AD167728F200B738F1 /* EYLAppDelegate.h */,
+				FF2376AE167728F200B738F1 /* EYLAppDelegate.m */,
+				FF2376B816772AB500B738F1 /* main.storyboard */,
+				FF2376B0167728F200B738F1 /* ipmobman01.xcdatamodeld */,
+				FFF89BD11695F0A000901F77 /* toDo.txt */,
+				FF2376A5167728F200B738F1 /* Supporting Files */,
+			);
+			path = ipmobman01;
+			sourceTree = "<group>";
+		};
+		FF2376A5167728F200B738F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF2376A6167728F200B738F1 /* ipmobman01-Info.plist */,
+				FF2376A7167728F200B738F1 /* InfoPlist.strings */,
+				FF2376AA167728F200B738F1 /* main.m */,
+				FF2376AC167728F200B738F1 /* ipmobman01-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFA10951169731A400A4E2F7 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				FFA1094F16972D3900A4E2F7 /* Mestre.gpx */,
+				FFA109501697314A00A4E2F7 /* Torino.gpx */,
+			);
+			name = Locations;
+			path = locations;
+			sourceTree = "<group>";
+		};
+		FFC4EC9C169C15F50024D5BE /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4EC9D169C164C0024D5BE /* Logging.h */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		FFC4ECA1169C7E500024D5BE /* newPathResults */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4ECA2169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.h */,
+				FFC4ECA3169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.m */,
+			);
+			path = newPathResults;
+			sourceTree = "<group>";
+		};
+		FFCDEAFA167A1D4D00563D48 /* newPath */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4EC9E169C3D690024D5BE /* EYLnavigationControllerDelegate.h */,
+				FFC4EC9F169C3D690024D5BE /* EYLnavigationControllerDelegate.m */,
+				FFCDEAF7167A174600563D48 /* EYLNewPathTableViewController.h */,
+				FFCDEAF8167A174600563D48 /* EYLNewPathTableViewController.m */,
+				FFFB81C21680B1D400147207 /* EYLPathDateTimeViewController.h */,
+				FFFB81C31680B1D400147207 /* EYLPathDateTimeViewController.m */,
+				FF53BCD016846B0400A40693 /* EYLSelectPointTableViewController.h */,
+				FF53BCD116846B0400A40693 /* EYLSelectPointTableViewController.m */,
+				FF53BCD416846DB700A40693 /* EYLSelectStopTableViewController.h */,
+				FF53BCD516846DB700A40693 /* EYLSelectStopTableViewController.m */,
+			);
+			name = newPath;
+			sourceTree = "<group>";
+		};
+		FFCDEAFD167A1FD000563D48 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FFCDEAFB167A1F6B00563D48 /* genstringCommandLine.txt */,
+				FFCDEAF5167A13F900563D48 /* Localizable.strings */,
+			);
+			name = Localization;
+			sourceTree = "<group>";
+		};
+		FFF89BCC1695E46A00901F77 /* remoteData */ = {
+			isa = PBXGroup;
+			children = (
+				FFF89BCE1695E4F000901F77 /* EYLremoteConnection.h */,
+				FFF89BCF1695E4F000901F77 /* EYLremoteConnection.m */,
+			);
+			path = remoteData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF237697167728F200B738F1 /* ipmobman01 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF2376B5167728F200B738F1 /* Build configuration list for PBXNativeTarget "ipmobman01" */;
+			buildPhases = (
+				FF237694167728F200B738F1 /* Sources */,
+				FF237695167728F200B738F1 /* Frameworks */,
+				FF237696167728F200B738F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ipmobman01;
+			productName = ipmobman01;
+			productReference = FF237698167728F200B738F1 /* ipmobman01.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF23768F167728F200B738F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EYL;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = FF237692167728F200B738F1 /* Build configuration list for PBXProject "ipmobman01" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FF23768D167728F200B738F1;
+			productRefGroup = FF237699167728F200B738F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF237697167728F200B738F1 /* ipmobman01 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF237696167728F200B738F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF2376A9167728F200B738F1 /* InfoPlist.strings in Resources */,
+				FF2376B916772AB500B738F1 /* main.storyboard in Resources */,
+				FFCDEAF6167A13F900563D48 /* Localizable.strings in Resources */,
+				FFCDEAFC167A1F6B00563D48 /* genstringCommandLine.txt in Resources */,
+				FFF89BD21695F0A000901F77 /* toDo.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF237694167728F200B738F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF2376AB167728F200B738F1 /* main.m in Sources */,
+				FF2376AF167728F200B738F1 /* EYLAppDelegate.m in Sources */,
+				FF2376B2167728F200B738F1 /* ipmobman01.xcdatamodeld in Sources */,
+				FFCDEAF9167A174600563D48 /* EYLNewPathTableViewController.m in Sources */,
+				FFFB81C41680B1D400147207 /* EYLPathDateTimeViewController.m in Sources */,
+				FF53BCD216846B0400A40693 /* EYLSelectPointTableViewController.m in Sources */,
+				FF53BCD616846DB700A40693 /* EYLSelectStopTableViewController.m in Sources */,
+				FFF89BD01695E4F000901F77 /* EYLremoteConnection.m in Sources */,
+				FFC4ECA0169C3D690024D5BE /* EYLnavigationControllerDelegate.m in Sources */,
+				FFC4ECA4169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FF2376A7167728F200B738F1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF2376A8167728F200B738F1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF2376B3167728F200B738F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FF2376B4167728F200B738F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF2376B6167728F200B738F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ipmobman01/ipmobman01-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"LOGGING_ENABLED=1",
+					"LOGGING_LEVEL_DEBUG=1",
+					"LOGGING_LEVEL_TRACE=1",
+					"LOGGING_LEVEL_INFO=1",
+					"LOGGING_LEVEL_ERROR=1",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				INFOPLIST_FILE = "ipmobman01/ipmobman01-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FF2376B7167728F200B738F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ipmobman01/ipmobman01-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"LOGGING_ENABLED=1",
+					"LOGGING_LEVEL_DEBUG=1",
+					"LOGGING_LEVEL_TRACE=1",
+					"LOGGING_LEVEL_INFO=1",
+					"LOGGING_LEVEL_ERROR=1",
+				);
+				INFOPLIST_FILE = "ipmobman01/ipmobman01-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF237692167728F200B738F1 /* Build configuration list for PBXProject "ipmobman01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF2376B3167728F200B738F1 /* Debug */,
+				FF2376B4167728F200B738F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF2376B5167728F200B738F1 /* Build configuration list for PBXNativeTarget "ipmobman01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF2376B6167728F200B738F1 /* Debug */,
+				FF2376B7167728F200B738F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FF2376B0167728F200B738F1 /* ipmobman01.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FF2376B1167728F200B738F1 /* ipmobman01.xcdatamodel */,
+			);
+			currentVersion = FF2376B1167728F200B738F1 /* ipmobman01.xcdatamodel */;
+			path = ipmobman01.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FF23768F167728F200B738F1 /* Project object */;
+}

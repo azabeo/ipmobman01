@@ -1,0 +1,10 @@
+Per attivare il logging di Logging.h
+- copaire il file Logging.h
+- andare sul progetto e in build settings
+- modificare preprocessor macros - debug in: LOGGING_ENABLED=1 LOGGING_LEVEL_DEBUG=1 LOGGING_LEVEL_TRACE=1 LOGGING_LEVEL_INFO=1 LOGGING_LEVEL_ERROR=1 (togliendo DEBUG=1 $(inherited) )
+- importare Logging.h dove si vuole loggare
+
+*** TODO  -----------
+- chiamare google directions e mostrare risultato
+esempio di chiamata:
+http://maps.googleapis.com/maps/api/directions/json?origin=RE%20UMBERTO&destination=Fermata%201951%20-%20MONCALIERI&mode=transit&departure_time=1357657831&language=en&units=metric&alternatives=true&sensor=false

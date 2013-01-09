@@ -5,6 +5,8 @@ Per attivare il logging di Logging.h
 - importare Logging.h dove si vuole loggare
 
 *** TODO  -----------
-- chiamare google directions e mostrare risultato
+- spostare in newpath view l'ottenimento dei latlon
+- usare un UIActivityIndicatorView per le attese di latlon e dei dati da server
+- passare i dati a newPathResult per ottenere, chiamare google directions e mostrare risultato
 esempio di chiamata:
 http://maps.googleapis.com/maps/api/directions/json?origin=RE%20UMBERTO&destination=Fermata%201951%20-%20MONCALIERI&mode=transit&departure_time=1357657831&language=en&units=metric&alternatives=true&sensor=false

@@ -174,7 +174,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="buttonPressed:" destination="fgs-Y1-OGe" eventType="touchUpInside" id="vh7-d8-3hM"/>
-                                                        <segue destination="v64-uR-J7r" kind="push" id="ly2-Ru-v13"/>
+                                                        <segue destination="v64-uR-J7r" kind="push" identifier="goSegue" id="ly2-Ru-v13"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -267,7 +267,7 @@
             </objects>
             <point key="canvasLocation" x="1600" y="-421"/>
         </scene>
-        <!--Lselect Trip Option Table View Controller-->
+        <!--Lselect Trip Option Table View Controller - select-->
         <scene sceneID="5Ic-q8-fz4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uh0-fj-JZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -354,7 +354,7 @@
                             <outlet property="delegate" destination="v64-uR-J7r" id="csd-nB-67f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="esY-ec-OOc"/>
+                    <navigationItem key="navigationItem" title="select" id="esY-ec-OOc"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="1600" y="177"/>

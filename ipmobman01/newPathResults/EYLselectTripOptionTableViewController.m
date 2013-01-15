@@ -26,6 +26,8 @@
 @synthesize when;
 @synthesize departure;
 
+EYLnavigationControllerDelegate* nav;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -50,6 +52,11 @@
     self.to = @"lavoro";
     self.when = @"adesso";
     self.departure = @"Departure";
+    
+    self.title = NSLocalizedString(@"Trip options", @"Trip options");
+    
+    EYLnavigationControllerDelegate* nav = (EYLnavigationControllerDelegate*)self.navigationController.delegate;
+    [nav printMe];
 }
 
 - (void)viewDidUnload

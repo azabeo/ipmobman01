@@ -10,6 +10,19 @@
 
 @implementation EYLnavigationControllerDelegate
 
+@synthesize from;
+@synthesize to;
+@synthesize when;
+@synthesize lonStart;
+@synthesize latStart;
+@synthesize language;
+@synthesize country;
+@synthesize isDeparture;
+@synthesize isMetric;
+@synthesize latEnd;
+@synthesize lonEnd;
+
+/*
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     LogDebug(@"SHOW");
@@ -17,6 +30,21 @@
         [viewController performSelector:@selector(showData)];
     }
     
+}
+ */
+
+- (id) init {
+    latStart = dStartLat;
+    lonStart = dStartLon;
+    latEnd = dEndLat;
+    lonEnd = dEndLon;
+    
+    return self;
+}
+
+-(void)printMe{
+    LogDebug(@"PRINT ME\nFROM: %@\nTO: %@\nWHEN: %@\nisDeparture: %i\nlatlon: %@,%@\nlang-country:%@-%@\nisMetric: %i",
+             from,to,when,isDeparture,latStart,lonStart,language,country,isMetric);
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EYLnavigationControllerDelegate.h"
 #import "Logging.h"
 
 @interface EYLselectTripOptionTableViewController : UITableViewController

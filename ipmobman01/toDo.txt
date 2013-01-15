@@ -6,8 +6,11 @@ Per attivare il logging di Logging.h
 
 *** TODO  -----------
 - [OK]spostare in newpath view l'ottenimento dei latlon
-- passare l'info di lat lon alle altre view con anche la lingua di display
+- mettere info di lat lon alle altre view con anche la lingua di display sul navigation delegate
+- fare in modo che di default si prenda let e lon costanti per poi aggiornare se c'è gps
 - usare un UIActivityIndicatorView per le attese di latlon e dei dati da server
 - passare i dati a newPathResult per ottenere, chiamare google directions e mostrare risultato
 esempio di chiamata:
 http://maps.googleapis.com/maps/api/directions/json?origin=RE%20UMBERTO&destination=Fermata%201951%20-%20MONCALIERI&mode=transit&departure_time=1357657831&language=en&units=metric&alternatives=true&sensor=false
+esempio di geocoding:
+http://maps.googleapis.com/maps/api/geocode/json?latlng=45.063872,7.675781&sensor=false

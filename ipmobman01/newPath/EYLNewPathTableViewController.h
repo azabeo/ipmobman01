@@ -11,7 +11,9 @@
 #import "EYLPathDateTimeViewController.h"
 #import "EYLSelectPointTableViewController.h"
 #import "EYLnavigationControllerDelegate.h"
+#import "EYLselectTripOptionTableViewController.h"
 #import "Logging.h"
+#import "Constants.h"
 
 @interface EYLNewPathTableViewController : UITableViewController <dateTimeProtocol, CLLocationManagerDelegate>
 
@@ -42,7 +44,5 @@
 - (IBAction)backgroundTap:(id)sender;
 
 - (IBAction)departureSwitchChanged:(id)sender;
-
-- (void) showData;
 
 @end

@@ -37,6 +37,7 @@ NSString *fromPoint;
 NSString *toPoint;
 
 NSDateFormatter *timeFormatter;
+NSDateFormatter *fixedDateFormatter;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -80,7 +81,11 @@ NSDateFormatter *timeFormatter;
     self.title = NSLocalizedString(@"New path", @"new path");
     
     timeFormatter = [[NSDateFormatter alloc]init];
-    timeFormatter.dateFormat = @"dd-MM-YYYY HH:mm";
+    [timeFormatter setDateStyle:dDateStyle];
+    [timeFormatter setTimeStyle:NSDateFormatterNoStyle];
+    
+    fixedDateFormatter = [[NSDateFormatter alloc]init];
+    [fixedDateFormatter setDateFormat:@"YYYY-MM-dd"];
     
     when = [NSDate date];
     
@@ -129,10 +134,12 @@ NSDateFormatter *timeFormatter;
 
 - (void) getLanguage{
     NSLocale *locale = [NSLocale currentLocale]; 
-    language = [locale displayNameForKey:NSLocaleIdentifier value:[locale localeIdentifier]]; 
     
-    LogInfo(@"METRIC: %@",[locale objectForKey:NSLocaleUsesMetricSystem]);
-    LogInfo(@"LANGUAGE: %@", language);
+    navControllerDelegate.language = [locale objectForKey:NSLocaleLanguageCode];
+    navControllerDelegate.country = [locale objectForKey:NSLocaleCountryCode];
+    navControllerDelegate.isMetric = [((NSNumber*)[locale objectForKey:NSLocaleUsesMetricSystem]) boolValue];
+    
+    LogInfo(@"LANGUAGE: %@",[locale displayNameForKey:NSLocaleIdentifier value:[locale localeIdentifier]]); 
 }
 
 - (void) getLatLon{
@@ -146,14 +153,27 @@ NSDateFormatter *timeFormatter;
     [locationManager startUpdatingLocation];
 }
 
+- (NSString*) getCityCenter:(NSString*)latLng{
+    //#TODO chiamare geocoding coon lalton
+    //#TODO prendere il nome città e nazione
+    return @"Torino";
+}
+
 #pragma mark -
 #pragma mark CLLocationManagerDelegate Methods
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     
     if (startingPoint == nil) self.startingPoint = newLocation;
-    NSString *latitudeString = [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
-    NSString *longitudeString = [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
+    
+    navControllerDelegate.latStart =  [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
+    navControllerDelegate.lonStart =  [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
+    
     [locationManager stopUpdatingLocation];
+    [locationActivityIndicator stopAnimating];
+    
+    fromText.placeholder = NSLocalizedString(@"Current location", @"Current location");
+    
+    LogDebug(@"LATLON: %@ - %@",navControllerDelegate.latStart, navControllerDelegate.lonStart);
     
     /*
     EYLremoteConnection* connection = [[EYLremoteConnection alloc] init];
@@ -161,10 +181,7 @@ NSDateFormatter *timeFormatter;
     [connection getStopsByDistanceWithLat:latitudeString Lon:longitudeString Dist:2 AgencyGlobalId:agid];
      */
     
-    [locationActivityIndicator stopAnimating];
-    fromText.placeholder = NSLocalizedString(@"Current location", @"from");
     
-    LogDebug(@"LATLON: %@ - %@",latitudeString, longitudeString);
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
@@ -177,12 +194,6 @@ NSDateFormatter *timeFormatter;
     
     LogError(@"Location Error");
 }
-
-
-- (void) showData{
-    LogDebug(@"\nFROM: %@\nTO: %@\nWHEN: %@\nisDeparture: %@",fromText.text,toText.text, [timeFormatter stringFromDate: when], departureLabel.text);
-}
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -249,6 +260,25 @@ NSDateFormatter *timeFormatter;
         dest.title = toPoint;
         dest.isStart = false;
     }
+    
+    if([[segue identifier] isEqualToString:@"goSegue"]){
+        //EYLselectTripOptionTableViewController* dest = (EYLselectTripOptionTableViewController*)cvc;
+        if ([fromText.text length] != 0) {
+            navControllerDelegate.from = fromText.text;
+        }else {
+            navControllerDelegate.from = [[dStartLat stringByAppendingString:@","]stringByAppendingString:dStartLon];
+        }
+        if ([toText.text length] != 0) {
+            navControllerDelegate.to = toText.text;
+        }else {
+            navControllerDelegate.to = [[dEndLat stringByAppendingString:@","]stringByAppendingString:dEndLon];
+        }
+        navControllerDelegate.when = [NSString stringWithFormat:@"%i",(int)[when timeIntervalSince1970]] ;
+        navControllerDelegate.isDeparture = departureSwitch.on;
+        
+        LogDebug(@"SEGUE %@",fromText.text);
+    }
+    
 }
 
 // used to close keyboard when pushing anywhere
@@ -261,6 +291,12 @@ NSDateFormatter *timeFormatter;
 
 - (void)setDate:(NSDate *)date{
     self.when = date;
+        
+    if ([[fixedDateFormatter stringFromDate:when] isEqualToString:[fixedDateFormatter stringFromDate:[NSDate date]]]) {
+        [timeFormatter setTimeStyle:NSDateFormatterNoStyle];
+    } else {
+        [timeFormatter setTimeStyle:dTimeStyle];
+    }
     
     self.timeLabel.text = [timeFormatter stringFromDate: when];
 }

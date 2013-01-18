@@ -17,15 +17,12 @@
 @implementation EYLSelectStopTableViewController
 
 @synthesize stopsTableView;
-@synthesize locationManager; 
-@synthesize startingPoint;
 @synthesize stopsList;
 @synthesize isStart;
 
 NSMutableString* selectedStopName;
 EYLNewPathTableViewController* dest = Nil;
-
-NSString * const agid = @"id1";
+EYLnavigationControllerDelegate* nav = Nil;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -48,8 +45,10 @@ NSString * const agid = @"id1";
     
     self.title = NSLocalizedString(@"Select a stop", @"Select a stop");
     
+    nav = self.navigationController.delegate;
+    
     dispatch_async(kBgQueue, ^{
-        [self performSelectorOnMainThread:@selector(connect) 
+        [self performSelectorOnMainThread:@selector(getStops) 
                                withObject:Nil waitUntilDone:YES];
     });
     
@@ -62,8 +61,7 @@ NSString * const agid = @"id1";
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-    
-    self.locationManager = nil;
+
     self.stopsList = nil;
 }
 
@@ -72,13 +70,13 @@ NSString * const agid = @"id1";
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void) connect{
-    LogDebug(@"connect");
+- (void) getStops{
+    LogDebug(@"getStops");
     
-    self.locationManager = [[CLLocationManager alloc] init]; 
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest; 
-    [locationManager startUpdatingLocation];
+    EYLremoteConnection* connection = [[EYLremoteConnection alloc] init];
+    connection.delegate = self;
+    
+    [connection getStopsByDistanceWithLat:(nav.latStart) Lon:(nav.lonStart) Dist:dDistanceFromStops AgencyGlobalId:dAgid];
 }
 
 #pragma mark - remoteDataProtocol implementation
@@ -92,29 +90,6 @@ NSString * const agid = @"id1";
 }
 
 #pragma mark -
-#pragma mark CLLocationManagerDelegate Methods
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    
-    if (startingPoint == nil) self.startingPoint = newLocation;
-    NSString *latitudeString = [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
-    NSString *longitudeString = [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
-    
-    EYLremoteConnection* connection = [[EYLremoteConnection alloc] init];
-    connection.delegate = self;
-    [connection getStopsByDistanceWithLat:latitudeString Lon:longitudeString Dist:2 AgencyGlobalId:agid];
-    [locationManager stopUpdatingLocation];
-}
-
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-    if (error.code == kCLErrorDenied) {
-        [locationManager stopUpdatingLocation];
-    } 
-    if (error.code == kCLErrorLocationUnknown) {
-        //nothing to do
-    } 
-
-    LogError(@"Error");
-}
 
 #pragma mark - Table view data source
 

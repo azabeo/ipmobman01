@@ -24,13 +24,13 @@
 		FFCDEAF6167A13F900563D48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFCDEAF5167A13F900563D48 /* Localizable.strings */; };
 		FFCDEAF9167A174600563D48 /* EYLNewPathTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCDEAF8167A174600563D48 /* EYLNewPathTableViewController.m */; };
 		FFCDEAFC167A1F6B00563D48 /* genstringCommandLine.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFCDEAFB167A1F6B00563D48 /* genstringCommandLine.txt */; };
+		FFE88E3216A9AB4A00D5CC66 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE88E3116A9AB4A00D5CC66 /* Constants.m */; };
 		FFF89BD01695E4F000901F77 /* EYLremoteConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF89BCF1695E4F000901F77 /* EYLremoteConnection.m */; };
 		FFF89BD21695F0A000901F77 /* toDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFF89BD11695F0A000901F77 /* toDo.txt */; };
 		FFFB81C41680B1D400147207 /* EYLPathDateTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFB81C31680B1D400147207 /* EYLPathDateTimeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF0F654516A576340004B2D1 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FF237698167728F200B738F1 /* ipmobman01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ipmobman01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF23769C167728F200B738F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FF23769E167728F200B738F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +60,8 @@
 		FFCDEAF7167A174600563D48 /* EYLNewPathTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EYLNewPathTableViewController.h; path = newPath/EYLNewPathTableViewController.h; sourceTree = "<group>"; };
 		FFCDEAF8167A174600563D48 /* EYLNewPathTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EYLNewPathTableViewController.m; path = newPath/EYLNewPathTableViewController.m; sourceTree = "<group>"; };
 		FFCDEAFB167A1F6B00563D48 /* genstringCommandLine.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = genstringCommandLine.txt; sourceTree = "<group>"; };
+		FFE88E3016A9AB4A00D5CC66 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		FFE88E3116A9AB4A00D5CC66 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		FFF89BCE1695E4F000901F77 /* EYLremoteConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLremoteConnection.h; sourceTree = "<group>"; };
 		FFF89BCF1695E4F000901F77 /* EYLremoteConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLremoteConnection.m; sourceTree = "<group>"; };
 		FFF89BD11695F0A000901F77 /* toDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = toDo.txt; sourceTree = "<group>"; };
@@ -123,7 +125,8 @@
 				FFC4ECA1169C7E500024D5BE /* newPathResults */,
 				FF2376AD167728F200B738F1 /* EYLAppDelegate.h */,
 				FF2376AE167728F200B738F1 /* EYLAppDelegate.m */,
-				FF0F654516A576340004B2D1 /* Constants.h */,
+				FFE88E3016A9AB4A00D5CC66 /* Constants.h */,
+				FFE88E3116A9AB4A00D5CC66 /* Constants.m */,
 				FF2376B816772AB500B738F1 /* main.storyboard */,
 				FF2376B0167728F200B738F1 /* ipmobman01.xcdatamodeld */,
 				FFF89BD11695F0A000901F77 /* toDo.txt */,
@@ -281,6 +284,7 @@
 				FFF89BD01695E4F000901F77 /* EYLremoteConnection.m in Sources */,
 				FFC4ECA0169C3D690024D5BE /* EYLnavigationControllerDelegate.m in Sources */,
 				FFC4ECA4169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.m in Sources */,
+				FFE88E3216A9AB4A00D5CC66 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

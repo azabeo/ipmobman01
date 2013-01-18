@@ -7,16 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 #import "EYLremoteConnection.h"
 #import "EYLNewPathTableViewController.h"
+#import "EYLnavigationControllerDelegate.h"
+#import "Constants.h"
 #import "Logging.h"
 
-@interface EYLSelectStopTableViewController : UITableViewController<remoteDataProtocol, CLLocationManagerDelegate>
+@interface EYLSelectStopTableViewController : UITableViewController<remoteDataProtocol>
 
 @property (weak, nonatomic) IBOutlet UITableView *stopsTableView;
-@property (strong, nonatomic) CLLocationManager *locationManager; 
-@property (strong, nonatomic) CLLocation *startingPoint;
 @property (strong, nonatomic) NSMutableArray* stopsList;
 
 @property (nonatomic) BOOL isStart;

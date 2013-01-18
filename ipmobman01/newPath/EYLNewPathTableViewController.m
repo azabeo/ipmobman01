@@ -153,10 +153,10 @@ NSDateFormatter *fixedDateFormatter;
     [locationManager startUpdatingLocation];
 }
 
-- (NSString*) getCityCenter:(NSString*)latLng{
+- (NSString*) getCityName:(NSString*)startLatLng{
     //#TODO chiamare geocoding coon lalton
     //#TODO prendere il nome città e nazione
-    return @"Torino";
+    return @"Torino, Italia";
 }
 
 #pragma mark -
@@ -168,12 +168,15 @@ NSDateFormatter *fixedDateFormatter;
     navControllerDelegate.latStart =  [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
     navControllerDelegate.lonStart =  [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
     
+    navControllerDelegate.cityName = [self getCityName:[[navControllerDelegate.latStart stringByAppendingString:@","] stringByAppendingString:navControllerDelegate.lonStart]];
+    
     [locationManager stopUpdatingLocation];
     [locationActivityIndicator stopAnimating];
     
     fromText.placeholder = NSLocalizedString(@"Current location", @"Current location");
     
-    LogDebug(@"LATLON: %@ - %@",navControllerDelegate.latStart, navControllerDelegate.lonStart);
+    //LogDebug(@"LATLON: %@ - %@",navControllerDelegate.latStart, navControllerDelegate.lonStart);
+    [navControllerDelegate printMe];
     
     /*
     EYLremoteConnection* connection = [[EYLremoteConnection alloc] init];
@@ -266,12 +269,16 @@ NSDateFormatter *fixedDateFormatter;
         if ([fromText.text length] != 0) {
             navControllerDelegate.from = fromText.text;
         }else {
-            navControllerDelegate.from = [[dStartLat stringByAppendingString:@","]stringByAppendingString:dStartLon];
+            navControllerDelegate.from = [[navControllerDelegate.latStart stringByAppendingString:@","]stringByAppendingString:navControllerDelegate.lonStart];
         }
         if ([toText.text length] != 0) {
             navControllerDelegate.to = toText.text;
         }else {
-            navControllerDelegate.to = [[dEndLat stringByAppendingString:@","]stringByAppendingString:dEndLon];
+            if ([navControllerDelegate.cityName length] != 0) {
+                navControllerDelegate.to = navControllerDelegate.cityName;
+            } else {
+                navControllerDelegate.to = [[navControllerDelegate.latEnd stringByAppendingString:@","]stringByAppendingString:navControllerDelegate.lonEnd];
+            }
         }
         navControllerDelegate.when = [NSString stringWithFormat:@"%i",(int)[when timeIntervalSince1970]] ;
         navControllerDelegate.isDeparture = departureSwitch.on;

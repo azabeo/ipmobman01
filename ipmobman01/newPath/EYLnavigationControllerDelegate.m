@@ -21,6 +21,7 @@
 @synthesize isMetric;
 @synthesize latEnd;
 @synthesize lonEnd;
+@synthesize cityName;
 
 /*
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated

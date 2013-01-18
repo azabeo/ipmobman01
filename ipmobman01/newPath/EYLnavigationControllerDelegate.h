@@ -17,6 +17,8 @@
 @property (strong, nonatomic) NSString* latEnd;
 @property (strong, nonatomic) NSString* lonEnd;
 
+@property (strong, nonatomic) NSString* cityName;
+
 @property (strong, nonatomic) NSString* from;
 @property (strong, nonatomic) NSString* to;
 @property (strong, nonatomic) NSString* when;

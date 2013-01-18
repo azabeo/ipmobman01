@@ -24,20 +24,17 @@
 @synthesize departureSwitch;
 @synthesize departureLabel;
 @synthesize locationManager; 
-@synthesize startingPoint;
+//@synthesize startingPoint;
 @synthesize locationActivityIndicator;
-@synthesize when;
+//@synthesize when;
 @synthesize navControllerDelegate;
-@synthesize language;
+//@synthesize language;
 
 NSString *dep;
 NSString *arr;
 
 NSString *fromPoint;
 NSString *toPoint;
-
-NSDateFormatter *timeFormatter;
-NSDateFormatter *fixedDateFormatter;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -80,14 +77,11 @@ NSDateFormatter *fixedDateFormatter;
     
     self.title = NSLocalizedString(@"New path", @"new path");
     
-    timeFormatter = [[NSDateFormatter alloc]init];
-    [timeFormatter setDateStyle:dDateStyle];
-    [timeFormatter setTimeStyle:NSDateFormatterNoStyle];
     
-    fixedDateFormatter = [[NSDateFormatter alloc]init];
-    [fixedDateFormatter setDateFormat:@"YYYY-MM-dd"];
     
-    when = [NSDate date];
+    
+    
+    //when = [NSDate date];
     
     self.timeLabel.text = NSLocalizedString(@"Now", @"Now");
     
@@ -162,8 +156,6 @@ NSDateFormatter *fixedDateFormatter;
 #pragma mark -
 #pragma mark CLLocationManagerDelegate Methods
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    
-    if (startingPoint == nil) self.startingPoint = newLocation;
     
     navControllerDelegate.latStart =  [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
     navControllerDelegate.lonStart =  [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
@@ -280,7 +272,7 @@ NSDateFormatter *fixedDateFormatter;
                 navControllerDelegate.to = [[navControllerDelegate.latEnd stringByAppendingString:@","]stringByAppendingString:navControllerDelegate.lonEnd];
             }
         }
-        navControllerDelegate.when = [NSString stringWithFormat:@"%i",(int)[when timeIntervalSince1970]] ;
+        //navControllerDelegate.when = [NSString stringWithFormat:@"%i",(int)[when timeIntervalSince1970]] ;
         navControllerDelegate.isDeparture = departureSwitch.on;
         
         LogDebug(@"SEGUE %@",fromText.text);
@@ -296,16 +288,9 @@ NSDateFormatter *fixedDateFormatter;
 
 #pragma mark - dateTimeProtocol implementation
 
-- (void)setDate:(NSDate *)date{
-    self.when = date;
-        
-    if ([[fixedDateFormatter stringFromDate:when] isEqualToString:[fixedDateFormatter stringFromDate:[NSDate date]]]) {
-        [timeFormatter setTimeStyle:NSDateFormatterNoStyle];
-    } else {
-        [timeFormatter setTimeStyle:dTimeStyle];
-    }
-    
-    self.timeLabel.text = [timeFormatter stringFromDate: when];
+- (void)setDate:(NSDate *)date{ 
+    navControllerDelegate.when = date;
+    self.timeLabel.text = [navControllerDelegate whenString];
 }
 
 - (IBAction)buttonPressed:(id)sender {

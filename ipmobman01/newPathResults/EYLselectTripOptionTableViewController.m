@@ -11,20 +11,12 @@
 @interface EYLselectTripOptionTableViewController ()
 
 @property (strong, nonatomic) NSArray* options;
-@property (strong, nonatomic) NSString* from;
-@property (strong, nonatomic) NSString* to;
-@property (strong, nonatomic) NSString* when;
-@property (strong, nonatomic) NSString* departure;
 
 @end
 
 @implementation EYLselectTripOptionTableViewController
 
 @synthesize options;
-@synthesize from;
-@synthesize to;
-@synthesize when;
-@synthesize departure;
 
 EYLnavigationControllerDelegate* nav;
 
@@ -47,15 +39,12 @@ EYLnavigationControllerDelegate* nav;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    EYLnavigationControllerDelegate* nav = (EYLnavigationControllerDelegate*)self.navigationController.delegate;
+    
     self.options = [NSArray arrayWithObjects:@"ciao", @"secondo", @"terxo", nil];
-    self.from = @"casa mia";
-    self.to = @"lavoro";
-    self.when = @"adesso";
-    self.departure = @"Departure";
     
     self.title = NSLocalizedString(@"Trip options", @"Trip options");
     
-    EYLnavigationControllerDelegate* nav = (EYLnavigationControllerDelegate*)self.navigationController.delegate;
     [nav printMe];
 }
 
@@ -83,8 +72,7 @@ EYLnavigationControllerDelegate* nav;
     if (section==0) {
         return nil;
     }else {
-        //#TODO aggiustare per multilingua
-        return @"Options";
+        return NSLocalizedString(@"Options", @"Options");
     }
     
 }
@@ -113,12 +101,12 @@ EYLnavigationControllerDelegate* nav;
     
     // Configure the cell...
     if (indexPath.section==0) {
-        ((UILabel *)[cell viewWithTag:1]).text = @"From:";
-        ((UILabel *)[cell viewWithTag:2]).text = @"To:";
-        ((UILabel *)[cell viewWithTag:3]).text = self.departure;
-        ((UILabel *)[cell viewWithTag:4]).text = self.from;
-        ((UILabel *)[cell viewWithTag:5]).text = self.to;
-        ((UILabel *)[cell viewWithTag:6]).text = self.when;
+        ((UILabel *)[cell viewWithTag:1]).text = NSLocalizedString(@"From:", @"From:");
+        ((UILabel *)[cell viewWithTag:2]).text = NSLocalizedString(@"To:", @"To:");
+        ((UILabel *)[cell viewWithTag:3]).text = [nav departureString];
+        ((UILabel *)[cell viewWithTag:4]).text = nav.from;
+        ((UILabel *)[cell viewWithTag:5]).text = nav.to;
+        ((UILabel *)[cell viewWithTag:6]).text = [nav whenString];
     }else {
         ((UILabel *)[cell viewWithTag:1]).text = [options objectAtIndex:indexPath.row];
     }

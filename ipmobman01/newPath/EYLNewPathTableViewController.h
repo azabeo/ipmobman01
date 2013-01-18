@@ -19,8 +19,8 @@
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *locationActivityIndicator;
 
-@property (strong, nonatomic) NSDate *when;
-@property (strong, nonatomic) NSString *language;
+//@property (strong, nonatomic) NSDate *when;
+//@property (strong, nonatomic) NSString *language;
 
 @property (weak, nonatomic) IBOutlet UILabel *fromLabel;
 @property (weak, nonatomic) IBOutlet UITextField *fromText;
@@ -37,7 +37,7 @@
 @property (strong, nonatomic) EYLnavigationControllerDelegate* navControllerDelegate;
 
 @property (strong, nonatomic) CLLocationManager *locationManager; 
-@property (strong, nonatomic) CLLocation *startingPoint;
+//@property (strong, nonatomic) CLLocation *startingPoint;
 
 - (IBAction)buttonPressed:(id)sender;
 - (IBAction)textFieldDoneEditing:(id)sender;

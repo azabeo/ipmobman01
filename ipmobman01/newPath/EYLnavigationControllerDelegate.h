@@ -21,7 +21,7 @@
 
 @property (strong, nonatomic) NSString* from;
 @property (strong, nonatomic) NSString* to;
-@property (strong, nonatomic) NSString* when;
+@property (strong, nonatomic) NSDate* when;
 
 @property BOOL isDeparture;
 @property BOOL isMetric;
@@ -29,6 +29,9 @@
 @property (strong, nonatomic) NSString* country;
 @property (strong, nonatomic) NSString* language;
 
--(void)printMe;
+-(void) printMe;
+-(NSString*) whenEpoch;
+-(NSString*) whenString;
+-(NSString*) departureString;
 
 @end

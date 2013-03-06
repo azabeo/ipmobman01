@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EYLrouteOption.h"
 #import "Logging.h"
 #import "Constants.h"
 
@@ -28,6 +29,8 @@
 
 @property (strong, nonatomic) NSString* country;
 @property (strong, nonatomic) NSString* language;
+
+@property (strong, nonatomic) EYLrouteOption* selectedTripOption;
 
 -(void) printMe;
 -(NSString*) whenEpoch;

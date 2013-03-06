@@ -65,7 +65,7 @@ NSString *toPoint;
     fromText.placeholder = NSLocalizedString(@"Locating...", @"Locating...");
     toLabel.text = NSLocalizedString(@"To:", @"to");
     toText.placeholder = NSLocalizedString(@"City center", @"city center");
-    goButton.titleLabel.text = NSLocalizedString(@"GO!", @"go");
+    [goButton setTitle:NSLocalizedString(@"GO!", @"GO!") forState:UIControlStateNormal];
     
     dep = NSLocalizedString(@"Departure", "Departure");
     arr = NSLocalizedString(@"Arrival", "Arrival");
@@ -77,12 +77,6 @@ NSString *toPoint;
     
     self.title = NSLocalizedString(@"New path", @"new path");
     
-    
-    
-    
-    
-    //when = [NSDate date];
-    
     self.timeLabel.text = NSLocalizedString(@"Now", @"Now");
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resetImage:)];
@@ -90,15 +84,7 @@ NSString *toPoint;
     tapGesture.cancelsTouchesInView = NO;
     
     navControllerDelegate = [[EYLnavigationControllerDelegate alloc] init];
-    
     self.navigationController.delegate = navControllerDelegate;
-    
-    /*
-    dispatch_async(kBgQueue, ^{
-        [self performSelectorOnMainThread:@selector(getLatLon) 
-                               withObject:Nil waitUntilDone:YES];
-    });
-    */
     
     [self getLatLon];
     [self getLanguage];
@@ -150,7 +136,8 @@ NSString *toPoint;
 - (NSString*) getCityName:(NSString*)startLatLng{
     //#TODO chiamare geocoding coon lalton
     //#TODO prendere il nome città e nazione
-    return @"Torino, Italia";
+    //return @"Torino, Italia";
+    return @"45.06176,7.696681";
 }
 
 #pragma mark -

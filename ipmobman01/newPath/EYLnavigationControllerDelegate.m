@@ -22,6 +22,7 @@
 @synthesize latEnd;
 @synthesize lonEnd;
 @synthesize cityName;
+@synthesize selectedTripOption;
 
 NSDateFormatter *timeFormatter;
 NSDateFormatter *fixedDateFormatter;
@@ -46,7 +47,7 @@ NSDateFormatter *fixedDateFormatter;
     when = [NSDate date];
     
     timeFormatter = [[NSDateFormatter alloc]init];
-    [timeFormatter setDateStyle:dDateStyle];
+    [timeFormatter setTimeStyle:dTimeStyle];
     
     fixedDateFormatter = [[NSDateFormatter alloc]init];
     [fixedDateFormatter setDateFormat:@"YYYY-MM-dd"];
@@ -60,9 +61,9 @@ NSDateFormatter *fixedDateFormatter;
 
 -(NSString*) whenString{
     if ([[fixedDateFormatter stringFromDate:when] isEqualToString:[fixedDateFormatter stringFromDate:[NSDate date]]]) {
-        [timeFormatter setTimeStyle:NSDateFormatterNoStyle];
+        [timeFormatter setDateStyle:NSDateFormatterNoStyle];
     } else {
-        [timeFormatter setTimeStyle:dTimeStyle];
+        [timeFormatter setDateStyle:dDateStyle];
     }
     
     return [timeFormatter stringFromDate: when];

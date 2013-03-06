@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "EYLSelectStopTableViewController.h"
 
-@interface EYLSelectPointTableViewController : UITableViewController
+@interface EYLSelectPointTableViewController : UITableViewController<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableViewCell *selectStopByNameLabel;
+@property (weak, nonatomic) IBOutlet UIWebView *stopsWebView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *stopsWebActivityIndicator;
 
 @property BOOL isStart;
 

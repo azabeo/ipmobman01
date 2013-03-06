@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-
 #import "EYLSelectStopTableViewController.h"
 
 @interface EYLSelectStopTableViewController ()
@@ -18,6 +16,7 @@
 
 @synthesize stopsTableView;
 @synthesize stopsList;
+@synthesize stopsActivityIndicator;
 @synthesize isStart;
 
 NSMutableString* selectedStopName;
@@ -48,16 +47,16 @@ EYLnavigationControllerDelegate* nav = Nil;
     nav = self.navigationController.delegate;
     
     dispatch_async(kBgQueue, ^{
-        [self performSelectorOnMainThread:@selector(getStops) 
+        [self performSelectorOnMainThread:@selector(getRemoteData) 
                                withObject:Nil waitUntilDone:YES];
     });
-    
-    //selectedStopName = [[NSMutableString alloc] init];
+
 }
 
 - (void)viewDidUnload
 {
     [self setStopsTableView:nil];
+    [self setStopsActivityIndicator:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -70,26 +69,27 @@ EYLnavigationControllerDelegate* nav = Nil;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void) getStops{
+#pragma mark - remoteDataProtocol implementation
+
+- (void) getRemoteData{
     LogDebug(@"getStops");
     
     EYLremoteConnection* connection = [[EYLremoteConnection alloc] init];
     connection.delegate = self;
     
-    [connection getStopsByDistanceWithLat:(nav.latStart) Lon:(nav.lonStart) Dist:dDistanceFromStops AgencyGlobalId:dAgid];
-}
-
-#pragma mark - remoteDataProtocol implementation
-
-- (void)setDataArray:(NSArray *)dataArray{
-    LogDebug(@"inDelegate");
+    [stopsActivityIndicator startAnimating];
     
-    self.stopsList = ((NSMutableArray*)dataArray);
-    
-    [stopsTableView reloadData];    
+    [connection getStopsByDistanceWithLat:(nav.latStart) Lon:(nav.lonStart) Dist:dDistanceFromStops AgencyGlobalId:dAgid Limit:dNumberOfStops isMetric:(nav.isMetric)];
 }
-
-#pragma mark -
+ 
+-(void) setDataArray:(NSArray *)dArray{
+    LogDebug(@"ISRECEIVED");
+    
+    self.stopsList = ((NSMutableArray*)dArray);
+    
+    [stopsActivityIndicator stopAnimating];
+    [stopsTableView reloadData];
+}
 
 #pragma mark - Table view data source
 

@@ -4,9 +4,17 @@ Per attivare il logging di Logging.h
 - modificare preprocessor macros - debug in: LOGGING_ENABLED=1 LOGGING_LEVEL_DEBUG=1 LOGGING_LEVEL_TRACE=1 LOGGING_LEVEL_INFO=1 LOGGING_LEVEL_ERROR=1 (togliendo DEBUG=1 $(inherited) )
 - importare Logging.h dove si vuole loggare
 
+Per resettare il workspace cancellare i file che si trovano in:
+/Users/azabeo/Xcode/ipmobman01/ipmobman01.xcodeproj/project.xcworkspace/xcuserdata/azabeo.xcuserdatad
+
+Link alle icone google:
+http://maps.gstatic.com/mapfiles/transit/iw/5/subway.png
+Per i diversi tipi di mezzo vedi: https://developers.google.com/maps/documentation/directions/#VehicleType
+
 Nel codice si trova
 #TODO
 #INFO
+#DAQUI
 
 *** TODO  ----------- 
 - [OK]spostare in newpath view l'ottenimento dei latlon
@@ -14,9 +22,12 @@ Nel codice si trova
 - [OK] fare in modo che di default si prenda let e lon costanti per poi aggiornare se c'è gps
 - [OK] usare un UIActivityIndicatorView per le attese di latlon
 - implementare getCityName nel newpathcontroller
-- usare un UIActivityIndicatorView per le attese dei dati da server
+- [OK] usare un UIActivityIndicatorView per le attese dei dati da server
+- controllare come evitare che la wuiwebview in EYLpathOptionTableViewController continui  caricare pagine dopo che si è aperto il link e si ritorna indietro alla app
 - passare i dati a newPathResult per ottenere i percorsi, chiamare google directions e mostrare risultato
 esempio di chiamata:
 http://maps.googleapis.com/maps/api/directions/json?origin=RE%20UMBERTO&destination=Fermata%201951%20-%20MONCALIERI&mode=transit&departure_time=1357657831&language=en&units=metric&alternatives=true&sensor=false
 esempio di geocoding:
 http://maps.googleapis.com/maps/api/geocode/json?latlng=45.063872,7.675781&sensor=false
+
+ATTENZIONE se si scrive solo il nome della via potrebbe prendere città a caso, speficare sempre la città 

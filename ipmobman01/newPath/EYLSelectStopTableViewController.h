@@ -13,11 +13,14 @@
 #import "Constants.h"
 #import "Logging.h"
 
-@interface EYLSelectStopTableViewController : UITableViewController<remoteDataProtocol>
+@interface EYLSelectStopTableViewController : UITableViewController<remoteConnectionProtocol>
 
 @property (weak, nonatomic) IBOutlet UITableView *stopsTableView;
 @property (strong, nonatomic) NSMutableArray* stopsList;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *stopsActivityIndicator;
 
 @property (nonatomic) BOOL isStart;
+
+
 
 @end

@@ -16,17 +16,36 @@
 		FF2376AF167728F200B738F1 /* EYLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2376AE167728F200B738F1 /* EYLAppDelegate.m */; };
 		FF2376B2167728F200B738F1 /* ipmobman01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF2376B0167728F200B738F1 /* ipmobman01.xcdatamodeld */; };
 		FF2376B916772AB500B738F1 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2376B816772AB500B738F1 /* main.storyboard */; };
+		FF2986AA16B7E28600ABBA9D /* tram.png in Resources */ = {isa = PBXBuildFile; fileRef = FF2986A916B7E28600ABBA9D /* tram.png */; };
+		FF2986AF16B8214C00ABBA9D /* EYLpathOptionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2986AE16B8214C00ABBA9D /* EYLpathOptionTableViewController.m */; };
+		FF43E9F416AFD1FC003857A8 /* EYLtripResultsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FF43E9F316AFD1FC003857A8 /* EYLtripResultsParser.m */; };
+		FF43E9FA16AFF6FE003857A8 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = FF43E9F916AFF6FE003857A8 /* walk.png */; };
+		FF43E9FD16AFF71B003857A8 /* it-metro.png in Resources */ = {isa = PBXBuildFile; fileRef = FF43E9FB16AFF71B003857A8 /* it-metro.png */; };
+		FF43E9FE16AFF71B003857A8 /* bus.png in Resources */ = {isa = PBXBuildFile; fileRef = FF43E9FC16AFF71B003857A8 /* bus.png */; };
+		FF43EA0016AFF97C003857A8 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = FF43E9FF16AFF97C003857A8 /* arrow.png */; };
+		FF471E7116BA7C9F0054394E /* EYLrouteStep.m in Sources */ = {isa = PBXBuildFile; fileRef = FF471E7016BA7C9F0054394E /* EYLrouteStep.m */; };
+		FF471E7816BA870E0054394E /* EYLrouteSubStep.m in Sources */ = {isa = PBXBuildFile; fileRef = FF471E7716BA870D0054394E /* EYLrouteSubStep.m */; };
+		FF471E7B16BA87780054394E /* EYLrouteTransitDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FF471E7A16BA87780054394E /* EYLrouteTransitDetail.m */; };
+		FF4F063F16DCD087005C5F5D /* EYLWebViewWithName.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4F063E16DCD087005C5F5D /* EYLWebViewWithName.m */; };
 		FF53BCD216846B0400A40693 /* EYLSelectPointTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF53BCD116846B0400A40693 /* EYLSelectPointTableViewController.m */; };
 		FF53BCD616846DB700A40693 /* EYLSelectStopTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF53BCD516846DB700A40693 /* EYLSelectStopTableViewController.m */; };
 		FFA1094D16972C3000A4E2F7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFA1094C16972C3000A4E2F7 /* CoreLocation.framework */; };
+		FFB5F60516BBB25F008F47DF /* navigator.png in Resources */ = {isa = PBXBuildFile; fileRef = FFB5F60416BBB25F008F47DF /* navigator.png */; };
 		FFC4ECA0169C3D690024D5BE /* EYLnavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC4EC9F169C3D690024D5BE /* EYLnavigationControllerDelegate.m */; };
 		FFC4ECA4169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ECA3169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.m */; };
 		FFCDEAF6167A13F900563D48 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FFCDEAF5167A13F900563D48 /* Localizable.strings */; };
 		FFCDEAF9167A174600563D48 /* EYLNewPathTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFCDEAF8167A174600563D48 /* EYLNewPathTableViewController.m */; };
 		FFCDEAFC167A1F6B00563D48 /* genstringCommandLine.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFCDEAFB167A1F6B00563D48 /* genstringCommandLine.txt */; };
 		FFE88E3216A9AB4A00D5CC66 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE88E3116A9AB4A00D5CC66 /* Constants.m */; };
+		FFE8ADEB16BBCCB900B6FEF8 /* EYLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE8ADEA16BBCCB900B6FEF8 /* EYLViewController.m */; };
+		FFE8ADED16BBD1E000B6FEF8 /* gtt.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE8ADEC16BBD1E000B6FEF8 /* gtt.png */; };
+		FFEFB32516C11FDF00B5B3AB /* tickets.png in Resources */ = {isa = PBXBuildFile; fileRef = FFEFB32416C11FDF00B5B3AB /* tickets.png */; };
+		FFEFB32716C11FF200B5B3AB /* floppy.png in Resources */ = {isa = PBXBuildFile; fileRef = FFEFB32616C11FF200B5B3AB /* floppy.png */; };
+		FFEFB32B16C121E400B5B3AB /* favs.png in Resources */ = {isa = PBXBuildFile; fileRef = FFEFB32A16C121E400B5B3AB /* favs.png */; };
 		FFF89BD01695E4F000901F77 /* EYLremoteConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF89BCF1695E4F000901F77 /* EYLremoteConnection.m */; };
 		FFF89BD21695F0A000901F77 /* toDo.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFF89BD11695F0A000901F77 /* toDo.txt */; };
+		FFF9C94316B18D440097D1CE /* EYLrouteOption.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF9C94216B18D440097D1CE /* EYLrouteOption.m */; };
+		FFF9C94816B196BD0097D1CE /* EYLutilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FFF9C94716B196BD0097D1CE /* EYLutilities.m */; };
 		FFFB81C41680B1D400147207 /* EYLPathDateTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFFB81C31680B1D400147207 /* EYLPathDateTimeViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +63,23 @@
 		FF2376AE167728F200B738F1 /* EYLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EYLAppDelegate.m; sourceTree = "<group>"; };
 		FF2376B1167728F200B738F1 /* ipmobman01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ipmobman01.xcdatamodel; sourceTree = "<group>"; };
 		FF2376B816772AB500B738F1 /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		FF2986A916B7E28600ABBA9D /* tram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tram.png; sourceTree = "<group>"; };
+		FF2986AD16B8214C00ABBA9D /* EYLpathOptionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLpathOptionTableViewController.h; sourceTree = "<group>"; };
+		FF2986AE16B8214C00ABBA9D /* EYLpathOptionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLpathOptionTableViewController.m; sourceTree = "<group>"; };
+		FF43E9F216AFD1FC003857A8 /* EYLtripResultsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLtripResultsParser.h; sourceTree = "<group>"; };
+		FF43E9F316AFD1FC003857A8 /* EYLtripResultsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLtripResultsParser.m; sourceTree = "<group>"; };
+		FF43E9F916AFF6FE003857A8 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk.png; sourceTree = "<group>"; };
+		FF43E9FB16AFF71B003857A8 /* it-metro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "it-metro.png"; sourceTree = "<group>"; };
+		FF43E9FC16AFF71B003857A8 /* bus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus.png; sourceTree = "<group>"; };
+		FF43E9FF16AFF97C003857A8 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		FF471E6F16BA7C9F0054394E /* EYLrouteStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLrouteStep.h; sourceTree = "<group>"; };
+		FF471E7016BA7C9F0054394E /* EYLrouteStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLrouteStep.m; sourceTree = "<group>"; };
+		FF471E7616BA870D0054394E /* EYLrouteSubStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLrouteSubStep.h; sourceTree = "<group>"; };
+		FF471E7716BA870D0054394E /* EYLrouteSubStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLrouteSubStep.m; sourceTree = "<group>"; };
+		FF471E7916BA87780054394E /* EYLrouteTransitDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLrouteTransitDetail.h; sourceTree = "<group>"; };
+		FF471E7A16BA87780054394E /* EYLrouteTransitDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLrouteTransitDetail.m; sourceTree = "<group>"; };
+		FF4F063D16DCD087005C5F5D /* EYLWebViewWithName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLWebViewWithName.h; sourceTree = "<group>"; };
+		FF4F063E16DCD087005C5F5D /* EYLWebViewWithName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLWebViewWithName.m; sourceTree = "<group>"; };
 		FF53BCD016846B0400A40693 /* EYLSelectPointTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EYLSelectPointTableViewController.h; path = newPath/EYLSelectPointTableViewController.h; sourceTree = "<group>"; };
 		FF53BCD116846B0400A40693 /* EYLSelectPointTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EYLSelectPointTableViewController.m; path = newPath/EYLSelectPointTableViewController.m; sourceTree = "<group>"; };
 		FF53BCD416846DB700A40693 /* EYLSelectStopTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EYLSelectStopTableViewController.h; path = newPath/EYLSelectStopTableViewController.h; sourceTree = "<group>"; };
@@ -51,6 +87,7 @@
 		FFA1094C16972C3000A4E2F7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FFA1094F16972D3900A4E2F7 /* Mestre.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Mestre.gpx; sourceTree = "<group>"; };
 		FFA109501697314A00A4E2F7 /* Torino.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Torino.gpx; sourceTree = "<group>"; };
+		FFB5F60416BBB25F008F47DF /* navigator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigator.png; sourceTree = "<group>"; };
 		FFC4EC9D169C164C0024D5BE /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		FFC4EC9E169C3D690024D5BE /* EYLnavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EYLnavigationControllerDelegate.h; path = newPath/EYLnavigationControllerDelegate.h; sourceTree = "<group>"; };
 		FFC4EC9F169C3D690024D5BE /* EYLnavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EYLnavigationControllerDelegate.m; path = newPath/EYLnavigationControllerDelegate.m; sourceTree = "<group>"; };
@@ -62,9 +99,19 @@
 		FFCDEAFB167A1F6B00563D48 /* genstringCommandLine.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = genstringCommandLine.txt; sourceTree = "<group>"; };
 		FFE88E3016A9AB4A00D5CC66 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		FFE88E3116A9AB4A00D5CC66 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		FFE8ADE916BBCCB900B6FEF8 /* EYLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLViewController.h; sourceTree = "<group>"; };
+		FFE8ADEA16BBCCB900B6FEF8 /* EYLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLViewController.m; sourceTree = "<group>"; };
+		FFE8ADEC16BBD1E000B6FEF8 /* gtt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gtt.png; sourceTree = "<group>"; };
+		FFEFB32416C11FDF00B5B3AB /* tickets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tickets.png; sourceTree = "<group>"; };
+		FFEFB32616C11FF200B5B3AB /* floppy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floppy.png; sourceTree = "<group>"; };
+		FFEFB32A16C121E400B5B3AB /* favs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favs.png; sourceTree = "<group>"; };
 		FFF89BCE1695E4F000901F77 /* EYLremoteConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLremoteConnection.h; sourceTree = "<group>"; };
 		FFF89BCF1695E4F000901F77 /* EYLremoteConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLremoteConnection.m; sourceTree = "<group>"; };
 		FFF89BD11695F0A000901F77 /* toDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = toDo.txt; sourceTree = "<group>"; };
+		FFF9C94116B18D440097D1CE /* EYLrouteOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLrouteOption.h; sourceTree = "<group>"; };
+		FFF9C94216B18D440097D1CE /* EYLrouteOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLrouteOption.m; sourceTree = "<group>"; };
+		FFF9C94616B196BD0097D1CE /* EYLutilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EYLutilities.h; sourceTree = "<group>"; };
+		FFF9C94716B196BD0097D1CE /* EYLutilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EYLutilities.m; sourceTree = "<group>"; };
 		FFFB81C21680B1D400147207 /* EYLPathDateTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EYLPathDateTimeViewController.h; path = newPath/EYLPathDateTimeViewController.h; sourceTree = "<group>"; };
 		FFFB81C31680B1D400147207 /* EYLPathDateTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EYLPathDateTimeViewController.m; path = newPath/EYLPathDateTimeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,12 +164,15 @@
 		FF2376A4167728F200B738F1 /* ipmobman01 */ = {
 			isa = PBXGroup;
 			children = (
+				FFF9C94516B196940097D1CE /* Utilities */,
+				FF43E9F816AFF6B5003857A8 /* Resources */,
 				FFC4EC9C169C15F50024D5BE /* Logging */,
 				FFA10951169731A400A4E2F7 /* Locations */,
 				FFF89BCC1695E46A00901F77 /* remoteData */,
 				FFCDEAFD167A1FD000563D48 /* Localization */,
 				FFCDEAFA167A1D4D00563D48 /* newPath */,
 				FFC4ECA1169C7E500024D5BE /* newPathResults */,
+				FF2986AC16B8210100ABBA9D /* pathOption */,
 				FF2376AD167728F200B738F1 /* EYLAppDelegate.h */,
 				FF2376AE167728F200B738F1 /* EYLAppDelegate.m */,
 				FFE88E3016A9AB4A00D5CC66 /* Constants.h */,
@@ -131,6 +181,8 @@
 				FF2376B0167728F200B738F1 /* ipmobman01.xcdatamodeld */,
 				FFF89BD11695F0A000901F77 /* toDo.txt */,
 				FF2376A5167728F200B738F1 /* Supporting Files */,
+				FFE8ADE916BBCCB900B6FEF8 /* EYLViewController.h */,
+				FFE8ADEA16BBCCB900B6FEF8 /* EYLViewController.m */,
 			);
 			path = ipmobman01;
 			sourceTree = "<group>";
@@ -145,6 +197,29 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		FF2986AC16B8210100ABBA9D /* pathOption */ = {
+			isa = PBXGroup;
+			children = (
+				FF2986AD16B8214C00ABBA9D /* EYLpathOptionTableViewController.h */,
+				FF2986AE16B8214C00ABBA9D /* EYLpathOptionTableViewController.m */,
+			);
+			path = pathOption;
+			sourceTree = "<group>";
+		};
+		FF43E9F816AFF6B5003857A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FFEFB32A16C121E400B5B3AB /* favs.png */,
+				FFEFB32616C11FF200B5B3AB /* floppy.png */,
+				FFEFB32416C11FDF00B5B3AB /* tickets.png */,
+				FFB5F60416BBB25F008F47DF /* navigator.png */,
+				FFEFB17316C11F1A00B5B3AB /* travel_modes */,
+				FFEFB17116C11EFF00B5B3AB /* agencies */,
+			);
+			name = Resources;
+			path = /Users/azabeo/Xcode/ipmobman01/ipmobman01/Resources;
+			sourceTree = "<absolute>";
 		};
 		FFA10951169731A400A4E2F7 /* Locations */ = {
 			isa = PBXGroup;
@@ -169,6 +244,16 @@
 			children = (
 				FFC4ECA2169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.h */,
 				FFC4ECA3169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.m */,
+				FF43E9F216AFD1FC003857A8 /* EYLtripResultsParser.h */,
+				FF43E9F316AFD1FC003857A8 /* EYLtripResultsParser.m */,
+				FFF9C94116B18D440097D1CE /* EYLrouteOption.h */,
+				FFF9C94216B18D440097D1CE /* EYLrouteOption.m */,
+				FF471E6F16BA7C9F0054394E /* EYLrouteStep.h */,
+				FF471E7016BA7C9F0054394E /* EYLrouteStep.m */,
+				FF471E7616BA870D0054394E /* EYLrouteSubStep.h */,
+				FF471E7716BA870D0054394E /* EYLrouteSubStep.m */,
+				FF471E7916BA87780054394E /* EYLrouteTransitDetail.h */,
+				FF471E7A16BA87780054394E /* EYLrouteTransitDetail.m */,
 			);
 			path = newPathResults;
 			sourceTree = "<group>";
@@ -199,6 +284,26 @@
 			name = Localization;
 			sourceTree = "<group>";
 		};
+		FFEFB17116C11EFF00B5B3AB /* agencies */ = {
+			isa = PBXGroup;
+			children = (
+				FFE8ADEC16BBD1E000B6FEF8 /* gtt.png */,
+			);
+			name = agencies;
+			sourceTree = "<group>";
+		};
+		FFEFB17316C11F1A00B5B3AB /* travel_modes */ = {
+			isa = PBXGroup;
+			children = (
+				FF2986A916B7E28600ABBA9D /* tram.png */,
+				FF43E9F916AFF6FE003857A8 /* walk.png */,
+				FF43E9FF16AFF97C003857A8 /* arrow.png */,
+				FF43E9FB16AFF71B003857A8 /* it-metro.png */,
+				FF43E9FC16AFF71B003857A8 /* bus.png */,
+			);
+			name = travel_modes;
+			sourceTree = "<group>";
+		};
 		FFF89BCC1695E46A00901F77 /* remoteData */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +311,17 @@
 				FFF89BCF1695E4F000901F77 /* EYLremoteConnection.m */,
 			);
 			path = remoteData;
+			sourceTree = "<group>";
+		};
+		FFF9C94516B196940097D1CE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FFF9C94616B196BD0097D1CE /* EYLutilities.h */,
+				FFF9C94716B196BD0097D1CE /* EYLutilities.m */,
+				FF4F063D16DCD087005C5F5D /* EYLWebViewWithName.h */,
+				FF4F063E16DCD087005C5F5D /* EYLWebViewWithName.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +380,16 @@
 				FFCDEAF6167A13F900563D48 /* Localizable.strings in Resources */,
 				FFCDEAFC167A1F6B00563D48 /* genstringCommandLine.txt in Resources */,
 				FFF89BD21695F0A000901F77 /* toDo.txt in Resources */,
+				FF43E9FA16AFF6FE003857A8 /* walk.png in Resources */,
+				FF43E9FD16AFF71B003857A8 /* it-metro.png in Resources */,
+				FF43E9FE16AFF71B003857A8 /* bus.png in Resources */,
+				FF43EA0016AFF97C003857A8 /* arrow.png in Resources */,
+				FF2986AA16B7E28600ABBA9D /* tram.png in Resources */,
+				FFB5F60516BBB25F008F47DF /* navigator.png in Resources */,
+				FFE8ADED16BBD1E000B6FEF8 /* gtt.png in Resources */,
+				FFEFB32516C11FDF00B5B3AB /* tickets.png in Resources */,
+				FFEFB32716C11FF200B5B3AB /* floppy.png in Resources */,
+				FFEFB32B16C121E400B5B3AB /* favs.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +411,15 @@
 				FFC4ECA0169C3D690024D5BE /* EYLnavigationControllerDelegate.m in Sources */,
 				FFC4ECA4169C7EBA0024D5BE /* EYLselectTripOptionTableViewController.m in Sources */,
 				FFE88E3216A9AB4A00D5CC66 /* Constants.m in Sources */,
+				FF43E9F416AFD1FC003857A8 /* EYLtripResultsParser.m in Sources */,
+				FFF9C94316B18D440097D1CE /* EYLrouteOption.m in Sources */,
+				FFF9C94816B196BD0097D1CE /* EYLutilities.m in Sources */,
+				FF2986AF16B8214C00ABBA9D /* EYLpathOptionTableViewController.m in Sources */,
+				FF471E7116BA7C9F0054394E /* EYLrouteStep.m in Sources */,
+				FF471E7816BA870E0054394E /* EYLrouteSubStep.m in Sources */,
+				FF471E7B16BA87780054394E /* EYLrouteTransitDetail.m in Sources */,
+				FFE8ADEB16BBCCB900B6FEF8 /* EYLViewController.m in Sources */,
+				FF4F063F16DCD087005C5F5D /* EYLWebViewWithName.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

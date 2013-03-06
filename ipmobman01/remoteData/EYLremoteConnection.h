@@ -8,19 +8,26 @@
 
 #import <Foundation/Foundation.h>
 #import "Logging.h"
+#import "Constants.h"
 
-@protocol remoteDataProtocol
+@protocol remoteConnectionProtocol
 
 @optional
-- (void)setDataArray:(NSArray *)dataArray;
-- (void)setDataDictionary:(NSDictionary *)dataDictionary;
+- (void)setDataArray:(NSArray *)dArray;
+- (void)setDataDictionary:(NSDictionary *)dDictionary;
 
 @end
 
 @interface EYLremoteConnection : NSObject
 
-@property (nonatomic, weak) id<remoteDataProtocol> delegate;
+@property (nonatomic, weak) id<remoteConnectionProtocol> delegate;
 
-- (void)getStopsByDistanceWithLat:(NSString*)lat Lon:(NSString*)lon Dist:(int)dist AgencyGlobalId:(NSString*)agid;
+- (BOOL)connectToUrl:(NSString*)url withPostString:(NSString*) postString;
+
+- (void)getStopsByDistanceWithLat:(NSString*)lat Lon:(NSString*)lon Dist:(int)dist AgencyGlobalId:(NSString*)agid Limit:(int)lim isMetric:(BOOL)ism;
+
+-(void)getTripOptionsWithOrigin:(NSString*)origin Destination:(NSString*)destination IsDeparture:(BOOL)isDeparture When:(NSString*)when Language:(NSString*)language IsMetric:(BOOL)isMetric;
+
++ (NSString*)getStopsPostStringWithLat:(NSString*)lat Lon:(NSString*)lon Dist:(int)dist AgencyGlobalId:(NSString*)agid Limit:(int)lim isMetric:(BOOL)ism;
 
 @end

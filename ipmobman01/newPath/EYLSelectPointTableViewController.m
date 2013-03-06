@@ -14,8 +14,12 @@
 
 @implementation EYLSelectPointTableViewController
 @synthesize selectStopByNameLabel;
+@synthesize stopsWebView;
+@synthesize stopsWebActivityIndicator;
 
 @synthesize isStart;
+
+//EYLnavigationControllerDelegate* nav = Nil;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,11 +41,32 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     selectStopByNameLabel.textLabel.text = NSLocalizedString(@"Stops by name", @"Stops by name");
+    
+    EYLnavigationControllerDelegate* nav = self.navigationController.delegate;
+    
+    [stopsWebActivityIndicator startAnimating];
+    
+    stopsWebView.backgroundColor = [UIColor clearColor];
+    stopsWebView.delegate = self;
+    
+    NSURL *url = [NSURL URLWithString: stopMapServiceUrl];
+    NSString *body = [EYLremoteConnection getStopsPostStringWithLat:(nav.latStart) Lon:(nav.lonStart) Dist:dDistanceFromStops AgencyGlobalId:dAgid Limit:dNumberOfStops isMetric:(nav.isMetric)];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL: url];
+    [request setHTTPMethod: @"POST"];
+    [request setHTTPBody: [body dataUsingEncoding: NSUTF8StringEncoding]];
+    [stopsWebView loadRequest: request];
+    
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [stopsWebActivityIndicator stopAnimating];
 }
 
 - (void)viewDidUnload
 {
     [self setSelectStopByNameLabel:nil];
+    [self setStopsWebView:nil];
+    [self setStopsWebActivityIndicator:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
